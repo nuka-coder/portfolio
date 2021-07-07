@@ -1,0 +1,28 @@
+/* Navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-item {
+  color: #DFCAD5;
+  font-family: Oswald, sans-serif;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+.site-logo {
+  border-bottom: 2px solid #DFCAD5;
+  color: #CE1379;
+  font-family: Abril Fatface, sans-serif;
+  padding-bottom: 5px;
+}
+.navbar-button {
+  background-color: #DFCAD5;
+  border: none;
+  border-radius: 5px;
+  color: #22233D;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  padding: 5px 20px;
+}
