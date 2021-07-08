@@ -1,11 +1,15 @@
 body {
-  margin: 0 100px;
+  margin: 0;
 }
-
 /* Navbar */
+.header {
+  background-color: rgb(161, 7, 91);
+  background-color: rgba(161, 7, 91, .5);
+}
 .navbar-container {
   align-items: center;
-  background-color: rgba(34, 35, 61, 1);
+  background-color: #22233D; /*fallback color*/
+  background-color: rgba(34, 35, 61, .5);
   display: flex;
   justify-content: space-between;
 }
@@ -16,18 +20,72 @@ body {
   padding: 0 10px;
   text-decoration: none;
 }
+.nav-item-container {
+  margin-left: 100px;
+}
+.nav-button-container {
+  margin-right: 100px;
+}
 .site-logo {
   border-bottom: 2px solid #DFCAD5;
   color: #CE1379;
   font-family: Abril Fatface, sans-serif;
   padding-bottom: 5px;
 }
-.navbar-button {
+.navbar-button, .get-started-button {
   background-color: #DFCAD5;
   border: none;
   border-radius: 5px;
   color: #22233D;
   font-family: Oswald, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: .5px;
   padding: 5px 20px;
+}
+
+/*Hero*/
+.hero-section {
+  align-items: center;
+  background-color: rgb(161, 7, 91);
+  background-color: rgba(161, 7, 91, .2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.hero-image {
+background-size: cover;
+opacity: 1;
+}
+.hero-image-secondary {
+  background-color: grey;
+  box-shadow: 5px 10px #DFCAD5;
+  font-size: 1.5rem;
+  height: 100%;
+  margin-right: 100px;
+  text-align: right;
+}
+.hero-heading {
+  color: white;
+  display: inline-block;
+  font-family: Abril Fatface, sans-serif;
+  font-size: 3rem;
+  padding-top: 20px;
+}
+.hero-subheading {
+  color: #DFCAD5;
+  font-family: Oswald, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+.get-started-button {
+  font-size: 1rem;
+  margin-bottom: 100px;
+  padding: 5px 30px;
+}
+.border {
+  border-top: 2px solid #DFCAD5;
+  width: 200px;
 }
