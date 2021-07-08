@@ -26,7 +26,7 @@ body {
 .nav-button-container {
   margin-right: 100px;
 }
-.drop-button {
+.drop-bars-button {
   visibility: hidden;
 }
 .site-logo {
@@ -36,11 +36,12 @@ body {
   margin: 20px 100px;
   padding: 5px;
 }
-.navbar-button, .get-started-button {
+.navbar-button, .get-started-button, .submit-button {
   background-color: #DFCAD5;
   border: none;
   border-radius: 5px;
   color: #22233D;
+  cursor: pointer;
   font-family: Oswald, sans-serif;
   font-weight: 400;
   letter-spacing: .5px;
@@ -55,7 +56,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 0 100px 50px;
 }
 .hero-image {
 background-size: cover;
@@ -74,6 +75,8 @@ opacity: 1;
   display: inline-block;
   font-family: Abril Fatface, sans-serif;
   font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
   padding-top: 20px;
 }
 .hero-subheading {
@@ -85,6 +88,8 @@ opacity: 1;
   line-height: 30px;
 }
 .get-started-button {
+  background-color: #CE1379;
+  color: white;
   font-size: 1rem;
   margin-bottom: 100px;
   padding: 5px 30px;
@@ -93,6 +98,46 @@ opacity: 1;
   border-top: 2px solid #DFCAD5;
   width: 200px;
 }
+
+/*Get In Touch Form*/
+.contact-form-section {
+  align-items: center;
+  background-color: #22233D;
+  display: flex;
+  flex-wrap: wrap;
+  height: 150px;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.contact-heading {
+  color: white;
+  font-family: Abril Fatface, sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.labels {
+  color: #DFCAD5;
+  font-family: Oswald, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.email-input, .name-input {
+  border: none;
+  border-bottom: 2px solid;
+  background-color: #22233D;
+  color: #DFCAD5;
+  display: block;
+  font-family: Oswald, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  width: 200px;
+}
+
+
+
+
+
+
 
 /* Media Queries */
 @media only screen and (max-width: 1000px) {
@@ -125,7 +170,7 @@ opacity: 1;
     display: block;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
   .navbar-button {
     display: none;
   }
