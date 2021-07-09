@@ -105,15 +105,18 @@ opacity: 1;
   background-color: #22233D;
   display: flex;
   flex-wrap: wrap;
-  height: 150px;
+  /* height: 150px; */
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 50px 100px;
 }
 .contact-heading, .offer-heading {
   color: white;
   font-family: Abril Fatface, sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
+}
+.contact-heading {
+  padding-right: 20px;
 }
 .labels {
   color: #DFCAD5;
@@ -132,13 +135,19 @@ opacity: 1;
   letter-spacing: 1px;
   width: 200px;
 }
+.input-container{
+  padding-right: 10px;
+}
+.submit-button-container {
+  padding-top: 20px;
+}
 
 /* Services */
 .all-cards-container {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin: auto;
+  margin: auto 100px auto;
 }
 .cards-text-div {
   width: 300px;
@@ -167,7 +176,7 @@ opacity: 1;
 .card {
   border: 1px solid black;
   border-radius: 5px;
-  margin: 20px 0 50px; /*around card div*/
+  margin: 20px 10px 50px; /*around card div*/
   padding: 20px; /*padding inside div around elements*/
 }
 
@@ -219,4 +228,35 @@ opacity: 1;
 .cards-text {
   padding: 0 10px;
 }
+}
+
+@media only screen and (max-width: 860px) {
+  .contact-form-section {
+  display: block;
+  padding-top: 20px;
+  position: relative;
+}
+.input-container {
+  padding: 10px 0;
+}
+.submit-button-container {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  padding-top: 0;
+}
+.submit-button {
+  box-shadow: 5px 5px #CE1379;
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .submit-button-container {
+    position: static;
+    right: 100px;
+    top: 50%;
+    padding-top: 20px;
+  }
 }
