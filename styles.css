@@ -109,7 +109,7 @@ opacity: 1;
   justify-content: space-between;
   padding: 0 100px;
 }
-.contact-heading {
+.contact-heading, .offer-heading {
   color: white;
   font-family: Abril Fatface, sans-serif;
   font-weight: 300;
@@ -133,11 +133,43 @@ opacity: 1;
   width: 200px;
 }
 
-
-
-
-
-
+/* Services */
+.all-cards-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.cards-text-div {
+  width: 300px;
+}
+.cards-text {
+  font-family: Oswald, sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.service-titles {
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.service-image {
+  height: 200px;
+  width: 300px;
+  margin: 0;
+}
+.offer-heading {
+  color: black;
+  padding-top: 20px;
+  text-align: center;
+}
+.card {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px 0 50px; /*around card div*/
+  padding: 20px; /*padding inside div around elements*/
+}
 
 /* Media Queries */
 @media only screen and (max-width: 1000px) {
@@ -174,4 +206,17 @@ opacity: 1;
   .navbar-button {
     display: none;
   }
+}
+
+@media only screen and (max-width: 1120px) {
+.all-cards-container {
+  flex-wrap: wrap;
+}
+.card {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cards-text {
+  padding: 0 10px;
+}
 }
