@@ -11,7 +11,6 @@
       4.4. services
     8. media queries
   ===========*/
-  
 /*==========
   global styling
   ==========*/
@@ -44,7 +43,9 @@ label, input {
 /*==========
   components (buttons)
   ==========*/
-.navbar-button, .get-started-button, .request-button {
+.navbar-button,
+.get-started-button,
+.request-button {
   background-color: #DFCAD5;
   color: #22233D;
 }
@@ -59,6 +60,12 @@ label, input {
 /*==========
   typography
   ==========*/
+.hero-heading,
+.about-heading {
+  color: white;
+  display: inline-block;
+  font-size: 3rem;
+}
 .contact-heading,
 .offer-heading,
 .hero-heading,
@@ -150,9 +157,6 @@ label, input {
 }
 
 .hero-heading {
-  color: white;
-  display: inline-block;
-  font-size: 3rem;
   padding-top: 20px;
 }
 
@@ -247,6 +251,41 @@ label, input {
 }
 
 /*==========
+  about section
+  ==========*/
+.about-background-container {
+  background-color: #DFCAD5;
+  display: flex;
+  justify-content: center;
+  padding: 50px 100px 50px;
+}
+
+.about-text-container {
+  margin: 50px 0 0 100px;
+}
+
+.bio-text {
+  width: 70%;
+}
+
+.profile-img {
+  padding-top: 100px;
+}
+.icons-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.skills-icons {
+  display: flex;
+}
+
+#icons i {
+  font-size: 2rem;
+  padding-right: 10px;
+}
+
+/*==========
   media queries
   ==========*/
 /* nav bar queries */
@@ -291,22 +330,6 @@ label, input {
   }
 }
 
-/* services card queries */
-@media only screen and (max-width: 1120px) {
-  .all-cards-container {
-    flex-wrap: wrap;
-  }
-
-  .card {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .cards-text {
-    padding: 0 10px;
-  }
-}
-
 /* contact form queries */
 @media only screen and (max-width: 860px) {
   .contact-form-section {
@@ -338,5 +361,21 @@ label, input {
     right: 100px;
     top: 50%;
     padding-top: 20px;
+  }
+}
+
+/* card queries */
+@media only screen and (max-width: 1120px) {
+  .all-cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .cards-text {
+    padding: 0 10px;
   }
 }
