@@ -14,15 +14,15 @@
 <body>
   <div class="hero-image" style="background-image: url('images/desktop.jpg');">
 
-<header class="header">
+<header id="Header" class="header">
 <div class="navbar-container">
   <div class="nav-item-container nav-drop">
       <i class="fas fa-bars hamburger-button"></i>
 
       <div class="drop-content">
-      <a href="" class="nav-item">About</a>
-      <a href="" class="nav-item">Services</a>
-      <a href="" class="nav-item">Portfolio</a>
+      <a href="#About" class="nav-item">About</a>
+      <a href="#Services" class="nav-item">Services</a>
+      <a href="#Projects" class="nav-item">Portfolio</a>
       </div>
 
   </div>
@@ -35,7 +35,7 @@
 </div>
 
 </header>
-<section class="hero-section">
+<section id="Hero" class="hero-section">
 
   <div>
     <h1 class="hero-heading">Launching a website is hard. <br> Let's make it simple.</h1>
@@ -122,11 +122,6 @@
 <section id="About">
 
 <div class="about-background-container">
-
-<div class="profile-img">
-  <img src="images/vintage-tech.jpg" alt="" height="280px" width="280px" style="border-radius:200px">
-</div>
-
 <div class="about-text-container">
     <h1 class="about-heading" style="color:white">I'M BRITTANY<br> A WEB DEVELOPER</h1>
   <h4>(and i love ginger chai)</h4>
@@ -145,8 +140,16 @@
     </div>
   </div>
 </div>
+
+<div class="profile-img">
+  <img src="images/vintage-tech.jpg" alt="" height="280px" width="280px" style="border-radius:200px">
 </div>
 
+</div>
+<!-- Back to Top Button -->
+<div class="back-to-top">
+  <a href="#header"><i class="fas fa-arrow-circle-up back-to-top"></i></a>
+</div>
 </section>
 
 <section id="Projects">
@@ -172,6 +175,11 @@
 </div>
 </section>
 
+<!-- Back to Top Button -->
+<div class="back-to-top">
+  <a href="#header"><i class="fas fa-arrow-circle-up back-to-top"></i></a>
+</div>
+
 <section id="CTA">
 <div class="cta-first-container">
   <h1 class="cta-heading">
@@ -191,11 +199,11 @@
     Coding, learning, and designing for the modern world.
   </p>
   <div class="footer-icons">
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-linkedin"></i>
-    <i class="fab fa-github-square"></i>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href=""><i class="fab fa-linkedin"></i></a>
+  <a href=""><i class="fab fa-github-square"></i></a>
   </div>
-  <h6 class="copyright">Handcrafted by me @ 2021 Brittany J.</h6>
+  <h5 class="copyright">Handcrafted by me @ 2021 Brittany J.</h5>
 </footer>
 
 

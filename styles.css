@@ -5,10 +5,13 @@
       2.1 buttons
     3. typography
     4. layout and general styles
-      4.1. navigation bar
-      4.2. hero
-      4.3. contact form
-      4.4. services
+      4.1. Navigation bar
+      4.2. Hero
+      4.3. Contact Form
+      4.4. Services
+      4.5 About
+      4.6 Projects
+      4.7 Footer
     8. media queries
   ===========*/
 /*==========
@@ -44,22 +47,50 @@ label, input {
 /*==========
   components (buttons)
   ==========*/
-.navbar-button,
-.get-started-button,
+
 .request-button {
   background-color: #DFCAD5;
   color: #22233D;
 }
-
+.request-button:hover {
+  box-shadow: 2px 3px #CE1379;
+  padding: 7px 21px;
+}
+.navbar-button {
+  background-color: #CE1379;
+  color: white;
+  padding: 5px 20px;
+  opacity: .7;
+}
 .get-started-button {
-  background-color: #5f64ab;
+  background-color: #CE1379;
   color: white;
   margin-bottom: 100px;
   padding: 5px 30px;
   opacity: .7;
 }
+.navbar-button:hover,
 .get-started-button:hover {
   opacity: 1;
+}
+.cta-btn:hover {
+  opacity: 1;
+}
+.github-btn:hover {
+  transform: rotate(5deg);
+  background-color: #22233D;
+  color: white;
+  border: 1px solid white;
+}
+div .back-to-top {
+  color: #DFCAD5;
+  padding: 5px 10px 5px;
+}
+.back-to-top {
+  color: black;
+  font-size: 1.5rem;
+  text-align: right;
+
 }
 
 /*==========
@@ -119,6 +150,11 @@ label, input {
   color: #CE1379;
   padding: 0 10px;
   text-decoration: none;
+  letter-spacing: 0;
+}
+.nav-item:hover {
+  letter-spacing: 3px;
+  color: white;
 }
 
 .nav-item-container {
@@ -135,7 +171,7 @@ label, input {
 
 .site-logo {
   border-bottom: 2px solid #DFCAD5;
-  color: #CE1379;
+  color:  #DFCAD5;
   letter-spacing: 1px;
   margin: 20px 100px;
   padding: 5px;
@@ -173,7 +209,7 @@ label, input {
 }
 
 .hero-subheading {
-  color: #DFCAD5;
+  color: #5f64ab;
   font-size: 1.5rem;
   padding-bottom: 20px;
   line-height: 30px;
@@ -269,13 +305,13 @@ label, input {
 .about-background-container {
   background-color: #DFCAD5;
   display: flex;
-  justify-content: center;
-  padding: 50px 100px 50px;
-  margin-top: 50px;
+  justify-content: space-around;
+  padding: 20px 100px 50px;
+  margin-top: 20px;
 }
-
-.about-text-container {
-  margin: 50px 0 0 100px;
+.about-heading {
+  display: block;
+  margin-right: 100px;
 }
 
 .bio-text {
@@ -284,6 +320,7 @@ label, input {
 
 .profile-img {
   padding-top: 100px;
+  margin-right: 200px;
 }
 .icons-container {
   display: flex;
@@ -305,7 +342,7 @@ label, input {
 #Projects {
   background-color: #22233D;
   padding: 50px 100px;
-  margin: 50px 0;
+  margin: 5px 0;
 }
 #Projects a {
  color: #CE1379;
@@ -321,7 +358,7 @@ label, input {
 .portfolio-thumbnails-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .portfolio-thumbnails {
@@ -333,9 +370,13 @@ label, input {
 }
 .github-button-container {
   text-align: center;
+  padding-top: 20px;
 }
 .github-btn {
   color: black;
+}
+.fa-github {
+  color: #5f64ab;
 }
 /*==========
   CTA
@@ -344,9 +385,9 @@ label, input {
   align-items: center;
   background-color: #DFCAD5;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 50px 100px;
-  margin-bottom: 50px;
+  margin: 5px 0 20px;
 }
 .cta-heading {
   font-size: 2rem;
@@ -371,7 +412,8 @@ label, input {
 .cta-btn {
   background-color: #22233D;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  opacity: .7;
 }
 #CTA img {
   margin: 50px 0 50px 50px;
@@ -399,6 +441,7 @@ label, input {
 }
 .footer-icons i {
   padding: 20px;
+  color: white;
 }
 .copyright {
   color: #DFCAD5;
