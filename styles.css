@@ -286,6 +286,36 @@ label, input {
 }
 
 /*==========
+Recent work
+  ==========*/
+#Recent-Work {
+  background-color: #22233D;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+#Recent-Work a {
+ color: #CE1379;
+}
+
+.portfolio-heading {
+  color: white;
+}
+.portfolio-thumbnails-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.portfolio-thumbnails {
+  background-color: silver;
+  /* height: ; */
+  width: 30%;
+  margin-right: 10px;
+}
+
+/*==========
   media queries
   ==========*/
 /* nav bar queries */
