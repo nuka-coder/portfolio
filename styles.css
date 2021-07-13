@@ -34,6 +34,7 @@ button {
 
 h1, h2 {
   font-family: Abril Fatface, sans-serif;
+  letter-spacing: 1px;
 }
 
 label, input {
@@ -51,10 +52,14 @@ label, input {
 }
 
 .get-started-button {
-  background-color: #CE1379;
+  background-color: #5f64ab;
   color: white;
   margin-bottom: 100px;
   padding: 5px 30px;
+  opacity: .7;
+}
+.get-started-button:hover {
+  opacity: 1;
 }
 
 /*==========
@@ -86,6 +91,11 @@ label, input {
 .name-input,
 .email-input {
   font-family: Oswald, sans-serif;
+}
+.fa-github {
+  color: #22233D;
+  font-size: 1rem;
+  padding: 0 5px 0 10px;
 }
 
 /*==========
@@ -126,6 +136,7 @@ label, input {
 .site-logo {
   border-bottom: 2px solid #DFCAD5;
   color: #CE1379;
+  letter-spacing: 1px;
   margin: 20px 100px;
   padding: 5px;
 }
@@ -133,6 +144,7 @@ label, input {
 /*==========
   hero
   ==========*/
+
 .hero-section {
   background-color: rgb(161, 7, 91);
   background-color: rgba(161, 7, 91, .2);
@@ -181,6 +193,7 @@ label, input {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 50px 100px;
+  margin-bottom: 50px;
 }
 
 .contact-heading, .offer-heading {
@@ -258,6 +271,7 @@ label, input {
   display: flex;
   justify-content: center;
   padding: 50px 100px 50px;
+  margin-top: 50px;
 }
 
 .about-text-container {
@@ -286,33 +300,111 @@ label, input {
 }
 
 /*==========
-Recent work
+  projects
   ==========*/
-#Recent-Work {
+#Projects {
   background-color: #22233D;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 50px 100px;
+  margin: 50px 0;
 }
-#Recent-Work a {
+#Projects a {
  color: #CE1379;
 }
-
+#Projects img {
+  border-radius: 10px;
+}
 .portfolio-heading {
   color: white;
+  letter-spacing: 1px;
+  font-weight: lighter;
 }
 .portfolio-thumbnails-row {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-
+  justify-content: space-between;
 }
+
 .portfolio-thumbnails {
   background-color: silver;
-  /* height: ; */
-  width: 30%;
-  margin-right: 10px;
+  border-radius: 10px;
+  height: 200px;
+  width: 270px;
+  margin: 10px 10px 20px 0;
+}
+.github-button-container {
+  text-align: center;
+}
+.github-btn {
+  color: black;
+}
+/*==========
+  CTA
+  ==========*/
+#CTA {
+  align-items: center;
+  background-color: #DFCAD5;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+  margin-bottom: 50px;
+}
+.cta-heading {
+  font-size: 2rem;
+}
+/*.cta-heading::after {
+  content: 'Let start with a chat, and you can tell me about your project.';
+  color: #CE1379;
+  background-color: white;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  padding: 5px;
+  opacity: .5;
+}*/
+.cta-subheading {
+  color: #5f64ab;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  opacity: .5;
+}
+.cta-btn {
+  background-color: #22233D;
+  color: white;
+  font-size: 1.5rem;
+}
+#CTA img {
+  margin: 50px 0 50px 50px;
+}
+/*==========
+  footer
+  ==========*/
+.footer {
+  background-color: #22233D;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-logo {
+  color: white;
+  display: inline-block;
+  margin: 0;
+}
+.footer-text {
+  color: #DFCAD5;
+  padding-top: 50px;
+}
+.footer-icons {
+  color: white;
+  font-size: 2rem;
+}
+.footer-icons i {
+  padding: 20px;
+}
+.copyright {
+  color: #DFCAD5;
+  letter-spacing: 1px;
+  font-weight: 200;
+  padding-top: 50px;
 }
 
 /*==========
