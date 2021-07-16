@@ -43,6 +43,79 @@ h1, h2 {
 label, input {
   color: #DFCAD5;
 }
+:root {
+  --nav-load-time: 400ms;
+  --nav-link-load-time: 500ms;
+  --title-load-delay: calc(var(--nav-load-time) + var(--nav-link-load-time));
+}
+/*==========
+  color palette
+  ==========*/
+  /* #DFCAD5;,  #22233D;, #5f64ab;,  #CE1379; #7d83e6 */
+
+/*==========/
+  animations
+  ==========*/
+.navbar-container {
+animation: nav-load var(--nav-load-time) ease-in;
+}
+.navbar-button,
+.site-logo-main,
+.nav-drop {
+animation: nav-link-load;
+animation-duration: var(--nav-link-load-time);
+animation-timing-function: ease-in;
+animation-delay: var(--nav-load-time);
+animation-fill-mode: forwards;
+transform: scale(0);
+}
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes nav-link-load {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hero-heading {
+  animation: title-load 300ms ease-in var(--title-load-delay);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+@keyframes title-load {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.hero-subheading {
+  animation: title-load 300ms ease-in calc(var(--title-load-delay) + 200ms);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.portfolio-hero-button {
+  animation: nav-link-load 300ms ease-in calc(var(--title-load-delay) + 300ms);
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
 
 /*==========
   components (buttons)
@@ -53,8 +126,8 @@ label, input {
   color: #22233D;
 }
 .request-button:hover {
-  box-shadow: 2px 3px #CE1379;
-  padding: 7px 21px;
+  background-color: #5f64ab;
+  color: white;
 }
 .navbar-button {
   background-color: #CE1379;
@@ -62,7 +135,7 @@ label, input {
   padding: 5px 20px;
   opacity: .7;
 }
-.get-started-button {
+.portfolio-hero-button {
   background-color: #CE1379;
   color: white;
   margin-bottom: 100px;
@@ -70,8 +143,11 @@ label, input {
   opacity: .7;
 }
 .navbar-button:hover,
-.get-started-button:hover {
+.portfolio-hero-button:hover {
   opacity: 1;
+  background-color: #DFCAD5;
+  color: #CE1379;
+  border: 1px solid #CE1379;
 }
 .cta-btn:hover {
   opacity: 1;
@@ -114,7 +190,7 @@ div .back-to-top {
 .email-input,
 .name-input,
 .request-button,
-.get-started-button {
+.portfolio-hero-button {
   font-size: 1rem;
 }
 
@@ -144,6 +220,7 @@ div .back-to-top {
   background-color: rgba(34, 35, 61, .5);
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
 }
 
 .nav-item {
@@ -159,6 +236,7 @@ div .back-to-top {
 
 .nav-item-container {
   margin-left: 100px;
+  padding-bottom: 15px;
 }
 
 .nav-button-container {
@@ -168,13 +246,18 @@ div .back-to-top {
 .hamburger-button {
   visibility: hidden;
 }
+.site-logo-main {
+  height: 40px;
+}
 
 .site-logo {
-  border-bottom: 2px solid #DFCAD5;
+  font-weight: lighter;
+  text-align: center;
+  border-bottom: 1px solid #DFCAD5;
   color:  #DFCAD5;
   letter-spacing: 1px;
-  margin: 20px 100px;
-  padding: 5px;
+  margin: 0 100px;
+  padding: 0 5px;
 }
 
 /*==========
@@ -193,7 +276,22 @@ div .back-to-top {
 .hero-image {
   background-size: cover;
   opacity: 1;
+  background-image: url('images/desktop.jpg');
+  height: 200%;
+  width: 100%;
+  background-position: 0 0;
+	background-repeat: repeat-x;
+  animation: animatedBackground 1s ease-in;
+
 }
+/* @keyframes animatedBackground {
+	0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
 
 .hero-image-secondary {
   background-color: grey;
@@ -268,6 +366,9 @@ div .back-to-top {
 .cards-text-div {
   width: 300px;
 }
+.card {
+  text-align: center;
+}
 
 .cards-text {
   font-size: 14px;
@@ -279,11 +380,13 @@ div .back-to-top {
 }
 
 .service-image {
-  height: 200px;
-  width: 300px;
-  margin: 0;
+  color: #5f64ab;
+  font-size: 5rem;
+  margin: 10px auto;
 }
-
+.service-image:hover {
+  transform: rotate(5deg);
+}
 .offer-heading {
   color: black;
   padding-top: 20px;
@@ -293,10 +396,8 @@ div .back-to-top {
 .card {
   border: 1px solid black;
   border-radius: 5px;
-  margin: 20px 10px 50px;
-  /*around card div*/
-  padding: 20px;
-  /*padding inside div around elements*/
+  margin: 20px 10px 50px; /*around card div*/
+  padding: 20px; /*padding inside div around elements*/
 }
 
 /*==========
@@ -304,8 +405,6 @@ div .back-to-top {
   ==========*/
 .about-background-container {
   background-color: #DFCAD5;
-  display: flex;
-  justify-content: space-around;
   padding: 20px 100px 50px;
   margin-top: 20px;
 }
@@ -313,27 +412,39 @@ div .back-to-top {
   display: block;
   margin-right: 100px;
 }
+.about-text-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
 
 .bio-text {
-  width: 70%;
+  padding-right: 25%
 }
 
 .profile-img {
-  padding-top: 100px;
-  margin-right: 200px;
+  display: inline-block;
 }
 .icons-container {
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
-.skills-icons {
+#icons {
   display: flex;
+  align-items: center;
+  margin: 0;
 }
+.cert-icon{
+cursor: pointer;
+border-bottom: 2px solid rgb(161, 7, 91);
+padding-bottom: 2px;
 
+}
 #icons i {
   font-size: 2rem;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 /*==========
@@ -358,15 +469,12 @@ div .back-to-top {
 .portfolio-thumbnails-row {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.portfolio-thumbnails {
-  background-color: silver;
-  border-radius: 10px;
-  height: 200px;
-  width: 270px;
-  margin: 10px 10px 20px 0;
+.portfolio-text {
+  color: #DFCAD5;
+  padding-left: 50px;
 }
 .github-button-container {
   text-align: center;
@@ -407,7 +515,7 @@ div .back-to-top {
   color: #5f64ab;
   font-size: 1rem;
   padding-bottom: 20px;
-  opacity: .5;
+  opacity: 1;
 }
 .cta-btn {
   background-color: #22233D;
@@ -442,6 +550,9 @@ div .back-to-top {
 .footer-icons i {
   padding: 20px;
   color: white;
+}
+.footer-icons i:hover {
+  color: #CE1379;
 }
 .copyright {
   color: #DFCAD5;
