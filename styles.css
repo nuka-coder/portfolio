@@ -62,7 +62,7 @@ animation: nav-load var(--nav-load-time) ease-in;
 .navbar-button,
 .site-logo-main,
 .nav-drop {
-animation: nav-link-load;
+animation-name: nav-link-load;
 animation-duration: var(--nav-link-load-time);
 animation-timing-function: ease-in;
 animation-delay: var(--nav-load-time);
@@ -88,7 +88,36 @@ transform: scale(0);
     transform: scale(1);
   }
 }
-.hero-heading {
+.portfolio-image-1,
+.portfolio-image-2,
+.portfolio-image-3 {
+  animation: carousel-click 500ms ease-in;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+@keyframes carousel-click {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.portfolio-text {
+  animation: carousel-click-text 500ms ease-in;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+@keyframes carousel-click-text {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.hero-heading,
+.title-heading-bottom-border  {
   animation: title-load 300ms ease-in var(--title-load-delay);
   animation-fill-mode: forwards;
   transform: translateY(-20px);
@@ -104,6 +133,7 @@ transform: scale(0);
     opacity: 1;
   }
 }
+
 
 .hero-subheading {
   animation: title-load 300ms ease-in calc(var(--title-load-delay) + 200ms);
@@ -147,8 +177,8 @@ transform: scale(0);
   opacity: 1;
   background-color: #DFCAD5;
   color: #CE1379;
-  border: 1px solid #CE1379;
 }
+
 .cta-btn:hover {
   opacity: 1;
 }
@@ -284,14 +314,6 @@ div .back-to-top {
   animation: animatedBackground 1s ease-in;
 
 }
-/* @keyframes animatedBackground {
-	0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
 
 .hero-image-secondary {
   background-color: grey;
@@ -486,6 +508,35 @@ padding-bottom: 2px;
 .fa-github {
   color: #5f64ab;
 }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 10px 2px 0;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.portfolio-image-1 {
+  cursor: pointer;
+}
+.portfolio-image-2,
+.portfolio-image-3 {
+  display: none;
+  cursor: pointer;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.text-btn-2,
+.text-btn-3 {
+  display: none;
+}
 /*==========
   CTA
   ==========*/
@@ -499,6 +550,11 @@ padding-bottom: 2px;
 }
 .cta-heading {
   font-size: 2rem;
+}
+.cta-image {
+  height: 200px;
+  width: 250px;
+  border-radius: 10px;
 }
 /*.cta-heading::after {
   content: 'Let start with a chat, and you can tell me about your project.';
