@@ -171,6 +171,7 @@ label, input {
 /*==========
   components (buttons)
   ==========*/
+
 .request-button {
   background-color: #DFCAD5;
   color: #22233D;
@@ -309,6 +310,10 @@ div .back-to-top {
 .site-logo-main {
   height: 40px;
 }
+.site-logo-main:hover {
+  cursor: pointer;
+}
+
 
 .site-logo {
   font-weight: lighter;
@@ -391,6 +396,15 @@ div .back-to-top {
 .contact-heading {
   padding-right: 20px;
 }
+.form-submit-greeting {
+  color: #DFcad5;
+  text-align: center;
+  font-family: Abril Fatface;
+  font-size: 2rem;
+  font-weight: lighter;
+  display: none;
+  opacity: 7;
+  text-decoration: underline;}
 
 .email-input, .name-input {
   border: none;
@@ -487,8 +501,10 @@ div .back-to-top {
 
 .profile-img {
   display: inline-block;
-}
-
+} /* the container for profile image */
+.profile {
+  opacity: .7;
+} /* the actual profile image */
 .icons-container {
   display: flex;
   flex-flow: column;
@@ -630,8 +646,7 @@ div .back-to-top {
   content: 'Let start with a chat, and you can tell me about your project.';
   color: #22233D;
   background-color: white;
-  border-radius: 10px;
-  display: inline-block;
+  display: block;
   font-size: 1rem;
   margin-top: 20px;
   padding: 5px 10px;
@@ -687,9 +702,9 @@ div .back-to-top {
   color: white;
 }
 
-.footer-icons i:hover {
+/* .footer-icons i:hover {
   color: #CE1379;
-}
+} */
 
 .copyright {
   color: #DFCAD5;
@@ -821,5 +836,16 @@ div .back-to-top {
     }
   .portfolio-text {
     padding-left: 0;
+  }
+}
+/* CTA queries */
+@media only screen and (max-width: 600px) {
+  #CTA {
+    flex-wrap: wrap;
+  }
+  #CTA img{
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
   }
 }
