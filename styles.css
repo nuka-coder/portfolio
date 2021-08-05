@@ -1,33 +1,344 @@
+/*===========
+  Table of Contents
+    1. global styling
+    2. components
+      2.1 buttons
+    3. typography
+    4. layout and general styles
+      4.1. navigation bar
+      4.2. hero
+      4.3. contact form
+      4.4. services
+    8. media queries
+  ===========*/
+  
+/*==========
+  global styling
+  ==========*/
 body {
-  margin: 0 100px;
+  align-items: center;
+  font-family: Oswald, sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
-/* Navbar */
+button {
+  border: none;
+  border-radius: 5px;
+  color: #DFCAD5;
+  cursor: pointer;
+  font-family: Oswald, sans-serif;
+  font-weight: 400;
+  letter-spacing: .5px;
+  padding: 5px 20px;
+}
+
+h1, h2 {
+  font-family: Abril Fatface, sans-serif;
+}
+
+label, input {
+  color: #DFCAD5;
+}
+
+/*==========
+  components (buttons)
+  ==========*/
+.navbar-button, .get-started-button, .request-button {
+  background-color: #DFCAD5;
+  color: #22233D;
+}
+
+.get-started-button {
+  background-color: #CE1379;
+  color: white;
+  margin-bottom: 100px;
+  padding: 5px 30px;
+}
+
+/*==========
+  typography
+  ==========*/
+.contact-heading,
+.offer-heading,
+.hero-heading,
+.hero-subheading {
+  font-weight: 300;
+}
+
+.site-logo,
+.labels,
+.email-input,
+.name-input,
+.request-button,
+.get-started-button {
+  font-size: 1rem;
+}
+
+.labels,
+.name-input,
+.email-input {
+  font-family: Oswald, sans-serif;
+}
+
+/*==========
+  navigation bar
+  ==========*/
+.header {
+  background-color: rgb(161, 7, 91);
+  background-color: rgba(161, 7, 91, .5);
+}
+
 .navbar-container {
   align-items: center;
-  background-color: rgba(34, 35, 61, 1);
+  background-color: #22233D;
+  /*fallback color*/
+  background-color: rgba(34, 35, 61, .5);
+
   display: flex;
   justify-content: space-between;
 }
+
 .nav-item {
-  color: #DFCAD5;
-  font-family: Oswald, sans-serif;
-  letter-spacing: 1px;
+  color: #CE1379;
+
   padding: 0 10px;
   text-decoration: none;
 }
+
+.nav-item-container {
+  margin-left: 100px;
+}
+
+.nav-button-container {
+  margin-right: 100px;
+}
+
+.hamburger-button {
+  visibility: hidden;
+}
+
 .site-logo {
   border-bottom: 2px solid #DFCAD5;
   color: #CE1379;
-  font-family: Abril Fatface, sans-serif;
-  padding-bottom: 5px;
+  margin: 20px 100px;
+  padding: 5px;
 }
-.navbar-button {
-  background-color: #DFCAD5;
+
+/*==========
+  hero
+  ==========*/
+.hero-section {
+  background-color: rgb(161, 7, 91);
+  background-color: rgba(161, 7, 91, .2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 100px 50px;
+}
+
+.hero-image {
+  background-size: cover;
+  opacity: 1;
+}
+
+.hero-image-secondary {
+  background-color: grey;
+  box-shadow: 5px 10px #DFCAD5;
+  font-size: 1.5rem;
+  height: 100%;
+  margin-right: 100px;
+  text-align: right;
+}
+
+.hero-heading {
+  color: white;
+  display: inline-block;
+  font-size: 3rem;
+  padding-top: 20px;
+}
+
+.hero-subheading {
+  color: #DFCAD5;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+.title-heading-bottom-border {
+  border-top: 2px solid #DFCAD5;
+  width: 200px;
+}
+
+/*==========
+  contact form
+  ==========*/
+.contact-form-section {
+  background-color: #22233D;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+
+.contact-heading, .offer-heading {
+  color: white;
+}
+
+.contact-heading {
+  padding-right: 20px;
+}
+
+.email-input, .name-input {
   border: none;
-  border-radius: 5px;
-  color: #22233D;
-  font-family: Oswald, sans-serif;
+  border-bottom: 2px solid;
+  background-color: #22233D;
+  display: block;
+  width: 200px;
+}
+
+.input-container {
+  padding-right: 10px;
+}
+
+.request-button-container {
+  padding-top: 20px;
+}
+
+/*==========
+  services
+  ==========*/
+.all-cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin: auto 100px auto;
+}
+
+.cards-text-div {
+  width: 300px;
+}
+
+.cards-text {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.service-titles {
   font-weight: 500;
-  padding: 5px 20px;
+}
+
+.service-image {
+  height: 200px;
+  width: 300px;
+  margin: 0;
+}
+
+.offer-heading {
+  color: black;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px 10px 50px;
+  /*around card div*/
+  padding: 20px;
+  /*padding inside div around elements*/
+}
+
+/*==========
+  media queries
+  ==========*/
+/* nav bar queries */
+@media only screen and (max-width: 1000px) {
+  .hamburger-button {
+    font-size: 1.5rem;
+    color: #DFCAD5;
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  .nav-drop {
+    position: relative;
+    display: inline-block;
+  }
+
+  .drop-content {
+    background-color: white;
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .drop-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+
+  .drop-content a:hover {
+    background-color: black;
+  }
+
+  .nav-drop:hover .drop-content {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .navbar-button {
+    display: none;
+  }
+}
+
+/* services card queries */
+@media only screen and (max-width: 1120px) {
+  .all-cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .cards-text {
+    padding: 0 10px;
+  }
+}
+
+/* contact form queries */
+@media only screen and (max-width: 860px) {
+  .contact-form-section {
+    display: block;
+    padding-top: 20px;
+    position: relative;
+  }
+
+  .input-container {
+    padding: 10px 0;
+  }
+
+  .request-button-container {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    padding-top: 0;
+  }
+
+  .request-button {
+    box-shadow: 5px 5px #CE1379;
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .request-button-container {
+    position: static;
+    right: 100px;
+    top: 50%;
+    padding-top: 20px;
+  }
 }
