@@ -94,12 +94,14 @@ label, input {
   background-color: #22233D;
   /*fallback color*/
   background-color: rgba(34, 35, 61, .5);
+
   display: flex;
   justify-content: space-between;
 }
 
 .nav-item {
   color: #CE1379;
+
   padding: 0 10px;
   text-decoration: none;
 }
