@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,128 +13,225 @@
 </head>
 
 <body>
-  <div class="hero-image" style="background-image: url('images/desktop.jpg');">
+  <div class="hero-image">
 
-<header class="header">
-<div class="navbar-container">
+    <header id="Header" class="header">
+      <div class="navbar-container">
+        <div class="nav-item-container nav-drop">
+          <i class="fas fa-bars hamburger-button"></i>
 
-  <div class="nav-item-container nav-drop">
-      <i class="fas fa-bars hamburger-button"></i>
+          <div class="drop-content">
+            <a href="#About" class="nav-item">About</a>
+            <a href="#Services" class="nav-item">Services</a>
+            <a href="#Projects" class="nav-item">Portfolio</a>
+          </div>
 
-      <div class="drop-content">
-
-      <a href="" class="nav-item">About</a>
-      <a href="" class="nav-item">Services</a>
-      <a href="" class="nav-item">Portfolio</a>
+        </div>
+        <div>
+          <img class="site-logo-main" src="C:\Users\Sunspear\Desktop\Developer\Personal Projects\Portfolio\images\logo three edit.png" alt="logo image">
+          <!--    <h2 class="site-logo">Site Logo</h2> -->
+        </div>
+        <div class="nav-button-container">
+          <button class="navbar-button">Blog</button>
+        </div>
       </div>
 
-  </div>
-  <div>
+    </header>
+    <section id="Hero" class="hero-section">
 
-    <h2 class="site-logo">Site Logo</h2>
-  </div>
-  <div class="nav-button-container">
-    <button class="navbar-button">GET IN TOUCH</button>
-
-  </div>
-</div>
-
-</header>
-<section class="hero-section">
-
-  <div>
-    <h1 class="hero-heading">Launching a website is hard. <br> Let's make it simple.</h1>
-    <div class="title-heading-bottom-border"></div>
-    <br>
-    <h3 class="hero-subheading">I build and design simple, responsive webpages <br> for your small business or organization.</h3>
-    <button class="get-started-button">GET STARTED</button>
-  </div>
-
-  <!-- <div class="hero-image-secondary">
-    <p>490x297</p>
-    <video width="320" height="180" controls>
-  <source src="images\Notebook - 6378.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-</video> -->
-  <!-- </div> -->
-
-</section>
-</div>
-
-<section class="contact-form-section">
-
-<div>
-  <h2 class="contact-heading">Get In Touch</h2>
-</div>
-
-<div class="input-container">
-  <label for="name" class="labels">Name:</label>
-  <input id="input" type="text" class="name-input" name="name" placeholder="Enter Your Full Name">
-</div>
-
-<div class="input-container">
-  <label for="email" class="labels">Email Address:</label>
-  <input id="input" type="email" class="email-input" name="email" placeholder="Enter Your Email Address">
-</div>
-
-<div class="request-button-container">
-  <button class="request-button">Request Contact</button>
-</div>
-
-</section>
-
-<section id="Services">
-
-  <div>
-    <h2 class="offer-heading">What I Offer:</h2>
-  </div>
-
-  <div class="all-cards-container">
-
-    <div class="card">
-      <img class="service-image" src="images/vintage-tech.jpg" alt="placeholder image">
-
-      <h3 class="service-titles">Service</h3>
-
-      <div class="cards-text-div">
-          <p class="cards-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+      <div>
+        <h1 class="hero-heading">Launching a website is hard. <br> Let's make it simple.</h1>
+        <div class="title-heading-bottom-border"></div>
+        <br>
+        <h3 class="hero-subheading">I'm a freelance web developer. <br> <br>
+          I build and design simple, responsive webpages <br> for your small business, organization, or portfolio.</h3>
+        <button class="portfolio-hero-button">Portfolio <i class="far fa-folder"></i></button>
       </div>
+    </section>
+
+  </div>
+
+  <section id="Contact" class="contact-form-section">
+
+    <div>
+      <h2 class="contact-heading">Get In Touch</h2>
     </div>
 
-    <div class="card">
-      <img class="service-image" src="images/vintage-tech.jpg" alt="placeholder image">
-
-      <h3 class="service-titles">Service</h3>
-
-      <div class="cards-text-div">
-          <p class="cards-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
-      </div>
+    <div class="input-container">
+      <label for="name" class="labels">Name:</label>
+      <input id="input" type="text" class="name-input" name="name" placeholder="Enter Your Full Name">
     </div>
 
-    <div class="card">
-      <img class="service-image" src="images/vintage-tech.jpg" alt="placeholder image">
-
-      <h3 class="service-titles">Service</h3>
-
-      <div class="cards-text-div">
-          <p class="cards-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
-      </div>
+    <div class="input-container">
+      <label for="email" class="labels">Email Address:</label>
+      <input id="input" type="email" class="email-input" name="email" placeholder="Enter Your Email Address">
     </div>
 
+    <div class="request-button-container">
+      <button class="request-button">Request Contact</button>
+    </div>
+
+  </section>
+
+  <section id="Services">
+
+    <div>
+      <h2 class="offer-heading">What I Offer:</h2>
+    </div>
+
+    <div class="all-cards-container">
+
+      <div class="card">
+        <i class="far fa-object-group service-image"></i>
+
+        <h3 class="service-titles">Web Design</h3>
+
+        <div class="cards-text-div">
+          <p class="cards-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-file-code service-image"></i>
+
+        <h3 class="service-titles">Development</h3>
+
+        <div class="cards-text-div">
+          <p class="cards-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-comments service-image"></i>
+
+        <h3 class="service-titles">One-to-One Communication</h3>
+
+        <div class="cards-text-div">
+          <p class="cards-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="About">
+
+    <div class="about-background-container">
+      <div class="about-text-container">
+        <div>
+          <h1 class="about-heading" style="color:white">I'M BRITTANY<br> A WEB DEVELOPER</h1>
+          <h4>(and i love ginger chai)</h4>
+          <p class="bio-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
+          <br>
+          <h4 style="margin-bottom: 0">No frills, just skills:</h4>
+          <br>
+          <div id="icons" class="skills-icons">
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-bootstrap"></i>
+            <i class="fab fa-node-js"></i>
+            <img title="Front-End Certified - W3 Schools" class="cert-icon" src="images/w3 icon-blk.png" alt="w3 school icon" height="40px" width="40px">
+          </div>
+
+        </div>
+
+        <div class="profile-img">
+          <img src="images/vintage-tech.jpg" alt="profile image" height="280px" width="280px" style="border-radius:200px">
+        </div>
+      </div>
+
+
+    </div>
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <a href="#header"><i class="fas fa-arrow-circle-up back-to-top"></i></a>
+    </div>
+  </section>
+
+  <section id="Projects">
+    <div>
+      <h2 class="portfolio-heading">Projects</h2>
+      <p style="color: #DFCAD5">Got a question? <a href="#">Contact Me.</a></p>
+    </div>
+    <div class="portfolio-thumbnails-row">
+
+      <div class="portfolio-thumbnails">
+
+        <img class="portfolio-image-1" height="100%" width="100%" src="images/vintage-tech.jpg" alt="placeholder img 1">
+
+        <img class="portfolio-image-2" height="100%" width="100%" src="images/desktop.jpg" alt="placeholder img 2">
+
+        <img class="portfolio-image-3" height="100%" width="100%" src="images/code-img.jpg" alt="placeholder img">
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot dot1"></span>
+          <span class="dot dot2"></span>
+          <span class="dot dot3"></span>
+        </div>
+
+      </div>
+
+    <div class="portfolio-text text-btn-1">
+      <a href="#" style="color: #DFCAD5" style="font-weight: bolder">Cycle Hostel</a>
+      <h5 style="color: #5f64ab ">What kind of company?</h5>
+      <p> Brief description of services provided...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolorem fuga accusamus fugit eum quos alias at quae! Beatae quis est corrupti atque consectetur, aliquam fugiat. Distinctio aspernatur quia voluptates itaque fuga sapiente sed? Magni pariatur aut earum voluptas distinctio doloribus voluptatem veritatis excepturi, recusandae animi tempore, odit ab error.</p>
+    </div>
+    <div class="portfolio-text text-btn-2">
+      <a href="#" style="color: #DFCAD5" style="font-weight: bolder">Restaurant Brochure</a>
+      <h5 style="color: #5f64ab ">What kind of company?</h5>
+      <p> Brief description of services provided...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolorem fuga accusamus fugit eum quos alias at quae! Beatae quis est corrupti atque consectetur, aliquam fugiat. Distinctio aspernatur quia voluptates itaque fuga sapiente sed? Magni pariatur aut earum voluptas distinctio doloribus voluptatem veritatis excepturi, recusandae animi tempore, odit ab error.</p>
+    </div>
+    <div class="portfolio-text text-btn-3">
+      <a href="#" style="color: #DFCAD5" style="font-weight: bolder">Web API</a>
+      <h5 style="color: #5f64ab ">What kind of company?</h5>
+      <p> Brief description of services provided...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolorem fuga accusamus fugit eum quos alias at quae! Beatae quis est corrupti atque consectetur, aliquam fugiat. Distinctio aspernatur quia voluptates itaque fuga sapiente sed? Magni pariatur aut earum voluptas distinctio doloribus voluptatem veritatis excepturi, recusandae animi tempore, odit ab error.</p>
+    </div>
   </div>
-</section>
 
-<section id="About">
+    <div class="github-button-container">
+      <button class="github-btn" type="button" name="github-btn">Check out more on<i class="fab fa-github"></i></button>
 
-<div class="about-background-container">
+    </div>
+  </section>
 
-</div>
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <a href="#header"><i class="fas fa-arrow-circle-up back-to-top"></i></a>
+  </div>
 
+  <section id="CTA">
+    <div class="cta-first-container">
+      <h1 class="cta-heading">
+        Interested in working together?
+      </h1>
+      <h3 class="cta-subheading">Let'start with a few questions, and you can tell me all about your project.</h3>
+      <button class="cta-btn">Let's do this.</button>
+    </div>
+    <div class="cta-last-container">
+      <img class="cta-image" src="images/vintage-tech.jpg" alt="placeholder image">
+    </div>
+  </section>
 
-</section>
-
+  <footer class="footer">
+    <img style="padding-top: 5px" class="site-logo-main" src="C:\Users\Sunspear\Desktop\Developer\Personal Projects\Portfolio\images\logo three edit.png" alt="logo image">
+    <!-- <h2 class="site-logo footer-logo">Site Logo</h2> -->
+    <p class="footer-text">
+      Coding, learning, and designing for the modern world.
+    </p>
+    <div class="footer-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-linkedin"></i></a>
+      <a href=""><i class="fab fa-github-square"></i></a>
+    </div>
+    <h5 class="copyright">Handcrafted by me @ 2021 Brittany J.</h5>
+  </footer>
 
 
 
 </body>
+
 </html>
