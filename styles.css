@@ -44,8 +44,11 @@ h1, h2 {
 h5 {
   margin: 0;
 }
-
-label, input {
+input {
+  background-color: white;
+  margin: 5px 0;
+}
+label {
   color: #DFCAD5;
 }
 
@@ -230,9 +233,9 @@ div .back-to-top {
   typography
   ==========*/
 .hero-heading,
-.about-heading {
+.about-heading,
+.cta-heading {
   color: white;
-  display: inline-block;
   font-size: 3rem;
 }
 
@@ -399,7 +402,7 @@ div .back-to-top {
 .form-submit-greeting {
   color: #DFcad5;
   text-align: center;
-  font-family: Abril Fatface;
+  font-family: Oswald;
   font-size: 2rem;
   font-weight: lighter;
   display: none;
@@ -408,7 +411,7 @@ div .back-to-top {
 
 .email-input, .name-input {
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #DFcad5;
   background-color: #22233D;
   display: block;
   width: 200px;
@@ -477,10 +480,13 @@ div .back-to-top {
 /*==========
   About Section
   ==========*/
-.about-background-container {
+#About {
+  align-items: center;
   background-color: #DFCAD5;
-  padding: 20px 100px 50px;
-  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 10px;
+  padding: 20px 25% 50px;
 }
 
 .about-heading {
@@ -488,23 +494,21 @@ div .back-to-top {
   margin-right: 100px;
 }
 
-.about-text-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-}
-
 .bio-text {
-  padding-right: 25%
+  padding-right: 25%;
+  width: 75%;
 }
 
 .profile-img {
   display: inline-block;
-} /* the container for profile image */
+  border-radius 100%;
+}
 .profile {
-  opacity: .7;
+  opacity: 1;
+  height: 350px;
+  width: 300px;
 } /* the actual profile image */
+
 .icons-container {
   display: flex;
   flex-flow: column;
@@ -624,22 +628,15 @@ div .back-to-top {
   background-color: #DFCAD5;
   display: flex;
   justify-content: space-around;
-  padding: 50px 100px;
+  padding: 10px 100px;
   margin-bottom: 5px;
 }
 
 .cta-heading {
   color: #CE1379;
-  font-size: 2rem;
   font-weight: lighter;
   text-decoration: underline;
   text-decoration-color: white;
-}
-
-.cta-image {
-  height: 200px;
-  width: 250px;
-  border-radius: 10px;
 }
 
 .cta-heading::after {
@@ -647,15 +644,15 @@ div .back-to-top {
   color: #22233D;
   background-color: white;
   display: block;
-  font-size: 1rem;
+  font-size: 2rem;
   margin-top: 20px;
   padding: 5px 10px;
 }
-.cta-subheading {
-  color: #22233D;
-  font-size: 1rem;
-  padding-bottom: 20px;
-  opacity: 1;
+
+.cta-image {
+  height: 400px;
+  width: 450px;
+  border-radius: 10px;
 }
 
 .cta-btn {
@@ -818,17 +815,18 @@ div .back-to-top {
 }
 /*About Queries*/
 @media only screen and (max-width: 850px) {
-  .about-text-container {
-    flex-wrap: wrap;
+  #About {
+    flex-direction: column;
     justify-content: center;
   }
   .about-top-div {
-    padding-left: 100px;
+    margin: 0 50px;
   }
   .profile-img {
     padding-top: 50px;
   }
 }
+
 /* Project Queries */
 @media only screen and (max-width: 980px) {
   .portfolio-thumbnails-row {

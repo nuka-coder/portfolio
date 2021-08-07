@@ -31,7 +31,7 @@
           <img class="site-logo-main" src="C:\Users\Sunspear\Desktop\Developer\Personal Projects\Portfolio\images\logo three edit.png" alt="logo image">
         </div>
         <div class="nav-button-container">
-          <button class="navbar-button">Blog</button>
+          <button id="Blog" class="navbar-button blog-btn">Blog</button>
         </div>
       </div>
 
@@ -45,12 +45,12 @@
         <br>
         <h3 style="margin:" class="hero-subheading">I'm a front-end developer and designer.</h3>
         <h3 class="hero-subheading">Creating engaging, responsive webpages, <br> to fit your vision and web needs.</h3>
-        <button class="portfolio-hero-button">Portfolio <i class="far fa-folder"></i></button>
+        <button id="Portfolio" target="_blank" class="portfolio-hero-button">Portfolio <i class="far fa-folder"></i></button>
       </div>
     </section>
   </div>
 
-  <form id="Form" action="post">
+  <form id="Form" action="post" method="get">
     <section id="Contact" class="contact-form-section">
       <h2 class="form-submit-greeting"></h2>
 
@@ -60,12 +60,12 @@
 
       <div class="input-container">
         <label for="name" class="labels">Name:</label>
-        <input id="input" type="text" class="name-input" name="name" placeholder="Enter Your Full Name" required>
+        <input style="background-color: white" type="text" class="name-input form-inputs" name="name" placeholder="Enter Your Full Name" required>
       </div>
 
       <div class="input-container">
         <label for="email" class="labels">Email Address:</label>
-        <input id="input" type="email" class="email-input" name="email" placeholder="Enter Your Email Address" required>
+        <input style="background-color: white" type="email" class="email-input form-inputs" name="email" placeholder="Enter Your Email Address" required>
       </div>
 
       <div class="request-button-container">
@@ -88,7 +88,7 @@
         <h3 class="service-titles">Web Design</h3>
 
         <div class="cards-text-div">
-          <p class="cards-text">Designing clean wesbsites, focused on optimizing user experience, aesthetics, and functionality.</p>
+          <p class="cards-text">Designing clean wesbsites, with user experience, aesthetics, and functionality in mind.</p>
         </div>
       </div>
 
@@ -125,18 +125,18 @@
     </div>
   </section>
 
-  <section id="About">
+    <section id="About" class="about-section">
 
-    <div class="about-background-container">
-      <div class="about-text-container">
         <div class="about-top-div">
           <h1 class="about-heading" style="color:white">I'M BRITTANY<br> A WEB DEVELOPER</h1>
           <h4>(and i love ginger chai)</h4>
-          <p class="bio-text">I'm a front-end web developer and web designer based in the United States.</p>
-          <p> My web development journey was born of out a natural curiosity and a love for tech and the arts. I strive for excellence in every pursuit I undertake, and I'm constantly working on improving my skills and expanding my knowledge one coding bug at a time.
+          <p class="bio-text">I'm a front-end web developer and web designer based in the United States. </p>
+          <p class="bio-text"> My web development journey was born out of natural curiosity, and a love for technology and the arts. These days I spend my time researching, designing, testing, and coding. I'm constantly working on improving my skills and
+          expanding my knowledge one coding bug at a time.
           </p>
-          <p>Let my passion become your next great website!</p>
-          <br>
+          <p class="bio-text">
+            Let my passion become your next great website!
+          </p>
           <h4 style="margin-bottom: 0">No frills, just skills:</h4>
           <br>
           <div id="icons" class="skills-icons">
@@ -154,14 +154,8 @@
         </div>
 
         <div class="profile-img">
-          <img class="profile" src="images/vintage-tech.jpg" alt="profile image" height="280px" width="280px" style="border-radius:200px">
+          <img class="profile" src="images/placeholder-img1.png" alt="profile image" style="border-radius:200px" title="Working on a swaggy photo!">
         </div>
-      </div>
-
-
-    </div>
-    <!-- Back to Top Button -->
-
   </section>
 
   <section id="Projects">
@@ -189,9 +183,10 @@
       </div>
 
       <div class="portfolio-text text-btn-1">
-        <a class="portfolio-website-names" href="#" style="color: #DFCAD5" style="font-weight: bolder">Cycle Hostel</a>
-        <h5 class="portfolio-h5" style="color: #5f64ab ">International hostel for backpackers and cyclists.</h5>
-        <p>A landing page implementing </p>
+        <a class="portfolio-website-names" href="#" style="color: #DFCAD5" style="font-weight: bolder">Cycle Hostel: Landing Page</a>
+        <h5 class="portfolio-h5" style="color: #5f64ab ">International Hostel for backpackers and cyclists.</h5>
+        <p><strong>My Process: </strong> </p>
+        <p style="margin:0">Explore market and research popular companies and brands employing similar web strategies. Compile spread of market-based design inspiration and potential color palettes. Wireframe project in AdobeXd. Construct mock-up based on wireframe. Prototype project in AdobeXd. Review any necessary changes. Begin Development of project in IDE using GIT and Github version control. Complete testing and debugging. Deployment of project. Review live project for any post-deployment issues or bugs.</p>
       </div>
       <div class="portfolio-text text-btn-2">
         <a class="portfolio-website-names" href="#" style="color: #DFCAD5" style="font-weight: bolder">Coming Soon</a>
@@ -208,26 +203,21 @@
     </div>
 
     <div class="github-button-container">
-      <button class="github-btn" type="button" name="github-btn">Check out more on<i class="fab fa-github"></i></button>
+      <button class="github-btn github" type="button" name="github-btn">Check out more on<i class="fab fa-github"></i></button>
 
     </div>
   </section>
-
-  <!-- Back to Top Button -->
-  <!-- <div class="back-to-top">
-    <a href="#header"><i class="fas fa-arrow-circle-up back-to-top"></i></a>
-  </div> -->
 
   <section id="CTA">
     <div class="cta-first-container">
       <h3 style="margin-bottom: 0" class="cta-subheading">Need a Website?</h3>
       <h1 style="margin-top: 0" class="cta-heading">
         I take on freelance opportunities.</h1>
-      <!-- <h3 style="line-height: 2" class="cta-subheading">Let's start with a chat, and you can tell me <br> about your project.</h3> -->
+
       <button class="cta-btn">Let's do this.</button>
     </div>
     <div class="cta-last-container">
-      <img class="cta-image" src="images/vintage-tech.jpg" alt="placeholder image">
+      <img class="cta-image" src="images/francesco-ungaro.jpg" alt="placeholder image">
     </div>
   </section>
 
@@ -239,9 +229,9 @@
         Coding, learning, and designing for the modern world.
       </p>
       <div class="footer-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-linkedin"></i></a>
-        <a href=""><i class="fab fa-github-square"></i></a>
+        <a href="#"><i class="fab fa-instagram instagram"></i></a>
+        <!-- <a href=""><i class="fab fa-linkedin"></i></a> -->
+        <a href=""><i class="fab fa-github-square github"></i></a>
       </div>
       <h5 class="copyright">Handcrafted by me @ 2021 Brittany J.</h5>
     </footer>
