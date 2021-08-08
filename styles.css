@@ -41,13 +41,16 @@ h1, h2 {
   font-family: Abril Fatface, sans-serif;
   letter-spacing: 1px;
 }
+
 h5 {
   margin: 0;
 }
+
 input {
   background-color: white;
   margin: 5px 0;
 }
+
 label {
   color: #DFCAD5;
 }
@@ -65,12 +68,14 @@ label {
 /*==========/
   animations
   ==========*/
-.navbar-container {
+.navbar-container,
+.header {
   animation: nav-load var(--nav-load-time) ease-in;
 }
 
 .navbar-button,
 .site-logo-main,
+.site-logo-contact,
 .nav-drop {
   animation-name: nav-link-load;
   animation-duration: var(--nav-link-load-time);
@@ -174,7 +179,6 @@ label {
 /*==========
   components (buttons)
   ==========*/
-
 .request-button {
   background-color: #DFCAD5;
   color: #22233D;
@@ -214,7 +218,7 @@ label {
 .github-btn:hover {
   transform: rotate(5deg);
   background-color: #fff;
-  color:  #22233D;
+  color: #22233D;
   border: 1px solid #5f64ab;
 }
 
@@ -271,8 +275,8 @@ div .back-to-top {
   navigation bar
   ==========*/
 .header {
-  background-color: rgb(161, 7, 91);
-  background-color: rgba(161, 7, 91, .5);
+  background-color: rgb(34, 35, 61);
+  background-color: rgba(0, 0, 0, .2);
 }
 
 .navbar-container {
@@ -310,13 +314,15 @@ div .back-to-top {
   visibility: hidden;
 }
 
-.site-logo-main {
+.site-logo-main,
+.site-logo-contact {
   height: 40px;
 }
-.site-logo-main:hover {
+
+.site-logo-main:hover,
+.site-logo-contact:hover {
   cursor: pointer;
 }
-
 
 .site-logo {
   font-weight: lighter;
@@ -359,15 +365,19 @@ div .back-to-top {
   margin-right: 100px;
   text-align: right;
 }
+
 .welcome-tag {
   font-size: 1.5rem;
   font-weight: 400;
   color: #5f64ab;
-  margin: 60px 0 20px;;
+  margin: 60px 0 20px;
+  ;
 }
+
 .hero-heading {
   margin: 5px 0 10px;
 }
+
 .hero-subheading {
   color: #5f64ab;
   font-size: 1.5rem;
@@ -381,7 +391,7 @@ div .back-to-top {
 }
 
 /*==========
-  contact form
+  Contact Form
   ==========*/
 .contact-form-section {
   background-color: #22233D;
@@ -399,6 +409,7 @@ div .back-to-top {
 .contact-heading {
   padding-right: 20px;
 }
+
 .form-submit-greeting {
   color: #DFcad5;
   text-align: center;
@@ -407,7 +418,8 @@ div .back-to-top {
   font-weight: lighter;
   display: none;
   opacity: 7;
-  text-decoration: underline;}
+  text-decoration: underline;
+}
 
 .email-input, .name-input {
   border: none;
@@ -426,7 +438,7 @@ div .back-to-top {
 }
 
 /*==========
-  services
+  Services
   ==========*/
 .all-cards-container {
   display: flex;
@@ -501,14 +513,16 @@ div .back-to-top {
 
 .profile-img {
   display: inline-block;
-  border-radius 100%;
+  border-radius: 100%;
 }
+
 .profile {
   opacity: 1;
   height: 350px;
   width: 300px;
-} /* the actual profile image */
+}
 
+/* the actual profile image */
 .icons-container {
   display: flex;
   flex-flow: column;
@@ -548,12 +562,15 @@ div .back-to-top {
 #Projects img {
   border-radius: 10px;
 }
+
 .portfolio-website-names {
   font-size: 1.5rem;
 }
+
 .portfolio-h5 {
   font-size: 1rem;
 }
+
 .portfolio-heading {
   color: white;
   letter-spacing: 1px;
@@ -570,6 +587,7 @@ div .back-to-top {
   color: #DFCAD5;
   padding-left: 50px;
 }
+
 .portfolio-h5 {
   padding-top: 10px;
 }
@@ -627,7 +645,7 @@ div .back-to-top {
   align-items: center;
   background-color: #DFCAD5;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px 100px;
   margin-bottom: 5px;
 }
@@ -660,6 +678,7 @@ div .back-to-top {
   color: white;
   font-size: 1rem;
 }
+
 .cta-btn:hover {
   background-color: white;
   color: #22233D;
@@ -670,7 +689,7 @@ div .back-to-top {
 }
 
 /*==========
-  footer
+  Footer
   ==========*/
 .footer {
   background-color: #22233D;
@@ -702,13 +721,69 @@ div .back-to-top {
 /* .footer-icons i:hover {
   color: #CE1379;
 } */
-
 .copyright {
   color: #DFCAD5;
   letter-spacing: 1px;
   font-weight: 200;
   padding-top: 50px;
 }
+
+/*==========
+Contact Page
+==========*/
+#Contact-Page {
+  background-color: #DFCAD5;
+}
+.contact-page-landing-container {
+  align-items: flex-start;
+  border-bottom: 10px solid white;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 100px;
+}
+.contact-page-heading {
+  font-size: 3rem;
+}
+.contact-page-landing-container input {
+  border: none;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.contact-inputs {
+  width: 100%;
+}
+
+.contact-cta p {
+  width: 50%;
+}
+.contact-page-landing-container label {
+color: #22233D;
+font-size: 1rem;
+}
+.contact-heading-border-1,
+.contact-heading-border-2 {
+  border-bottom: 5px solid #22233D;
+}
+.contact-heading-border-1 {
+  display: none;
+}
+.contact-page-submit-1,
+.contact-page-submit-2 {
+  background-color: #22233D;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 40px;
+}
+.contact-page-submit-2 {
+  display: none;
+}
+.contact-navbar {
+  background-color: #22233D;
+}
+
+
+
+
 
 /*==========
   media queries
@@ -755,7 +830,7 @@ div .back-to-top {
   }
 }
 
-/* contact form queries */
+/* contact form queries (index.html) */
 @media only screen and (max-width: 860px) {
   .contact-form-section {
     display: block;
@@ -778,6 +853,7 @@ div .back-to-top {
     box-shadow: 3px 3px #CE1379;
     padding: 10px 20px;
   }
+
   .request-button:hover {
     box-shadow: 3px 3px white;
   }
@@ -807,21 +883,24 @@ div .back-to-top {
     padding: 0 10px;
   }
 }
+
 @media only screen and (max-width: 950px) {
   .all-cards-container {
     justify-content: center;
   }
-
 }
+
 /*About Queries*/
 @media only screen and (max-width: 850px) {
   #About {
     flex-direction: column;
     justify-content: center;
   }
+
   .about-top-div {
     margin: 0 50px;
   }
+
   .profile-img {
     padding-top: 50px;
   }
@@ -831,19 +910,54 @@ div .back-to-top {
 @media only screen and (max-width: 980px) {
   .portfolio-thumbnails-row {
     flex-wrap: wrap;
-    }
+  }
+
   .portfolio-text {
     padding-left: 0;
   }
 }
+
 /* CTA queries */
+@media only screen and (max-width: 880px) {
+  #CTA {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #CTA {
     flex-wrap: wrap;
   }
-  #CTA img{
+
+  #CTA img {
     height: 100%;
     width: 100%;
     margin-left: 0;
+  }
+}
+/* Contact Page queries */
+@media only screen and (max-width: 900px) {
+  .contact-page-landing-container {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.contact-page-submit-1 {
+  display: none;
+}
+.contact-page-submit-2 {
+  display: block;
+}
+.contact-heading-border-1 {
+  display: inline-block;
+}
+.top-label-contact-page {
+  padding-top: 10px;
+}
+}
+@media only screen and (max-width: 720px) {
+  .contact-cta p {
+    width: 100%;
   }
 }
