@@ -6,9 +6,13 @@ $(document).on("mouseover", function() {
   $("input").css("background-color", "white");
 })
 
-//Site Logo Click event
+//Site Logo (main) page reload
 $(".site-logo-main").on("click", function() {
   location.reload();
+})
+//Site Logo (contact page) url redirect event
+$(".site-logo-contact").on("click", function() {
+  window.location.href="index.html";
 })
 //About Section Profile Image Effect
 $(".profile").on("mouseover", function() {
@@ -24,6 +28,10 @@ $("button").on("mouseover", function() {
 })
 $("button").on("mouseout", function() {
   $(this).animate({opacity: 1});
+})
+//CTA button url redirect
+$(".cta-btn").on("click", function() {
+  window.location.href="contact.html";
 })
 //Footer Icons Effects
 $(".footer-icons i").on("mouseover", function() {
