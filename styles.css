@@ -745,6 +745,7 @@ Contact Page
 }
 .contact-page-heading {
   font-size: 3rem;
+  margin-top: 0;
 }
 .contact-page-landing-container input {
   border: none;
@@ -754,7 +755,9 @@ Contact Page
 .contact-inputs {
   width: 100%;
 }
-
+.contact-cta {
+  padding-left: 50px;
+}
 .contact-cta p {
   width: 50%;
 }
@@ -939,12 +942,14 @@ font-size: 1rem;
   }
 }
 /* Contact Page queries */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 880px) {
   .contact-page-landing-container {
   flex-direction: column-reverse;
   align-items: flex-start;
 }
-
+.contact-cta {
+  padding-left: 0;
+}
 .contact-page-submit-1 {
   display: none;
 }
@@ -958,7 +963,7 @@ font-size: 1rem;
   padding-top: 10px;
 }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .contact-cta p {
     width: 100%;
   }
