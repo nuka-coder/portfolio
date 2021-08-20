@@ -1,3 +1,7 @@
+//Requires for Modules
+
+
+
 //Effects for Form Inputs
 $("input").on("click", function() {
   $(this).css("background-color", "#DFCAD5");

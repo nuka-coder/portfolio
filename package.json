@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Modules for Portfolio. nodemailer included.",
+  "main": "scripts.js",
+  "dependencies": {
+    "nodemailer": "^6.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houdinibeanie/Portfolio.git"
+  },
+  "keywords": [
+    "modules",
+    "node",
+    "js",
+    "npm"
+  ],
+  "author": "houdinibeanie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/houdinibeanie/Portfolio/issues"
+  },
+  "homepage": "https://github.com/houdinibeanie/Portfolio#readme"
+}
