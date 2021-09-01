@@ -16,7 +16,7 @@ o{
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/houdinibeanie/Portfolio.git"
+    "url": "git+https://github.com/nuka-coder/Portfolio.git"
   },
   "keywords": [
     "portfolio"
@@ -24,7 +24,7 @@ o{
   "author": "houdinibeanie",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/houdinibeanie/Portfolio/issues"
+    "url": "https://github.com/nuka-coder/Portfolio/issues"
   },
-  "homepage": "https://github.com/houdinibeanie/Portfolio#readme"
+  "homepage": "https://github.com/nuka-coder/Portfolio#readme"
 }
