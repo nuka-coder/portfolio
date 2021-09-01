@@ -68,12 +68,11 @@ label {
 /*==========/
   animations
   ==========*/
-.navbar-container,
 .header {
   animation: nav-load var(--nav-load-time) ease-in;
 }
 
-.navbar-button,
+.blog-btn,
 .site-logo-main,
 .site-logo-contact,
 .nav-drop {
@@ -189,25 +188,18 @@ label {
   color: white;
 }
 
-.navbar-button {
+.top-btns {
   background-color: #CE1379;
   color: white;
   padding: 5px 20px;
-  opacity: .7;
 }
 
 .portfolio-hero-button {
-  background-color: #CE1379;
-  color: white;
-  margin-bottom: 100px;
   padding: 5px 30px;
-  opacity: .7;
 }
 
-.navbar-button:hover,
-.portfolio-hero-button:hover {
-  opacity: 1;
-  background-color: #DFCAD5;
+.top-btns:hover{
+  background-color: white;
   color: #CE1379;
 }
 
@@ -780,6 +772,11 @@ font-size: 1rem;
 .contact-page-submit-2 {
   display: none;
 }
+.contact-page-submit-2:hover,
+.contact-page-submit-1:hover {
+  background-color: white;
+  color: #22233D;
+}
 .contact-navbar {
   background-color: #22233D;
 }
@@ -828,7 +825,7 @@ font-size: 1rem;
 }
 
 @media only screen and (max-width: 660px) {
-  .navbar-button {
+  .blog-btn {
     display: none;
   }
 }

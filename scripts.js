@@ -22,12 +22,12 @@ $(".profile").on("mouseout", function() {
   $(".profile").animate({opacity: .7});
 })
 
-//Button Hover Effects
-$("button").on("mouseover", function() {
-  $(this).animate({opacity: .7});
+//Header and Hero Button Hover Effects
+$(".top-btns").on("mouseover", function() {
+  $(this).animate({});
 })
 $("button").on("mouseout", function() {
-  $(this).animate({opacity: 1});
+  $(this).animate({});
 })
 //CTA button url redirect
 $(".cta-btn").on("click", function() {
@@ -42,7 +42,11 @@ $(".footer-icons i").on("mouseout", function() {
 })
 //Github Buttons (all)
 $(".github").on("click", function() {
-  window.open("https://github.com/houdinibeanie", "_blank");
+  window.open("https://github.com/nuka-coder", "_blank");
+})
+//Twitter Buttons (all)
+$(".github").on("click", function() {
+  window.open("https://twitter.com/nukaCoder", "_blank");
 })
 //Instagram Footer Button
 $(".instagram").on("click", function(){

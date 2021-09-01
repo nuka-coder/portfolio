@@ -1,12 +1,18 @@
-//Requires for Modules
+//Requirements for Modules
 //Express
 const express = require("express");
 const app = express();
-
-app.get("/", function(request, response){
-  response.send("Portfolio Server");
+//Establishing route for when browser requests to root
+app.get("/", function(req, res){
+  res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(2000, function(){
-  console.log("Server on 2000");
+//Establishing actions for sending form infomation
+app.post("/index.html", function(req, res){
+  var usersName = req.body.name;
+  var usersEmail = req.body.email;
+});
+
+app.listen(3000, function(){
+  console.log("Server started on 3000");
 });
