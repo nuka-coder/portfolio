@@ -58,7 +58,7 @@ $("#Blog").on("click", function() {
 })
 //Portfolio Button URL Redirect
 $("#Portfolio").on("click", function(){
-  window.open("https://github.com/houdinibeanie", "_blank");
+  window.open("https://github.com/nuka-coder", "_blank");
 })
 // Form Submission Greeting
 $("form").on("submit", function() {
