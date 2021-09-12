@@ -80,8 +80,8 @@ $(".github").on("click", function() {
   window.open("https://github.com/nuka-coder", "_blank");
 })
 //Twitter Buttons (all)
-$(".github").on("click", function() {
-  window.open("https://twitter.com/nukaCoder", "_blank");
+$(".twitter").on("click", function() {
+  window.open("https://twitter.com/nuka_coder", "_blank");
 })
 //Instagram Footer Button
 $(".instagram").on("click", function() {
@@ -92,8 +92,9 @@ $("#Blog").on("click", function() {
   window.open("https://brittany.hashnode.dev/", "_blank");
 })
 //Portfolio Button URL Redirect
-$("#Portfolio").on("click", function() {
-  window.open("https://github.com/houdinibeanie", "_blank");
+
+$("#Portfolio").on("click", function(){
+  window.open("https://github.com/nuka-coder", "_blank");
 })
 // Form Submission Greeting
 $("form").on("submit", function() {
