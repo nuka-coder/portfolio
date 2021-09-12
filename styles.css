@@ -49,6 +49,7 @@ h5 {
 input {
   background-color: white;
   margin: 5px 0;
+  padding: 0 10px;
 }
 
 label {
@@ -64,7 +65,9 @@ label {
 /*==========
   color palette
   ==========*/
-/* #DFCAD5;,  #22233D;, #5f64ab;,  #CE1379; #7d83e6 */
+/* #DFCAD5;,  #22233D;, #5f64ab;,  rgb(161, 7, 91) formerly #CE1379; #7d83e6 */
+
+
 /*==========/
   animations
   ==========*/
@@ -180,7 +183,13 @@ label {
   ==========*/
 .request-button {
   background-color: #DFCAD5;
+  border-radius: 0;
   color: #22233D;
+  padding: 8px 20px;
+}
+.request-button-container {
+  /* spacing between form input and button */
+  padding-left: 5px;
 }
 
 .request-button:hover {
@@ -189,7 +198,7 @@ label {
 }
 
 .top-btns {
-  background-color: #CE1379;
+  background-color: rgba(161, 7, 91, 1);
   color: white;
   padding: 5px 20px;
 }
@@ -200,7 +209,7 @@ label {
 
 .top-btns:hover{
   background-color: white;
-  color: #CE1379;
+  color: rgba(161, 7, 91, 1);
 }
 
 .cta-btn:hover {
@@ -244,8 +253,6 @@ div .back-to-top {
 
 .site-logo,
 .labels,
-.email-input,
-.name-input,
 .request-button,
 .portfolio-hero-button {
   font-size: 1rem;
@@ -255,6 +262,8 @@ div .back-to-top {
 .name-input,
 .email-input {
   font-family: Oswald, sans-serif;
+  font-size: 1.17rem;
+  letter-spacing: .01em;
 }
 
 .fa-github {
@@ -266,16 +275,41 @@ div .back-to-top {
 /*==========
   navigation bar
   ==========*/
-.header {
-  background-color: rgb(34, 35, 61);
-  background-color: rgba(0, 0, 0, .2);
+                              /* Navigation Scrolling */
+.scrolling-active {
+  /* toggling this class in the scripts to change the navbar on scroll */
+  background-color: rgba(34, 35, 61, .9);
+  box-shadow: 0 1px 3rem rgba(0, 0, 0, .5);
+  height: 2rem;
 }
+.scrolling-active .hamburger-button {
+  color: #22233D;
+}
+.blog-display-scroll {
+  display: none;
+}
+.nav-links-scroll {
+  text-align: right;
+}
+.links-2 {
+  display: none;
+  margin-right: 50px;
+}
+/* .no-transition {
+  transition: none !important;
+} */
 
+                            /* General Navigation Styling */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
 .navbar-container {
   align-items: center;
-  background-color: #22233D;
   /*fallback color*/
-  background-color: rgba(34, 35, 61, .5);
+  /* background-color: #22233D; */
+  /* background-color: rgba(34, 35, 61, .6); */
 
   display: flex;
   justify-content: space-between;
@@ -283,11 +317,12 @@ div .back-to-top {
 }
 
 .nav-item {
-  color: #CE1379;
+  color: rgba(161, 7, 91, 1);
+  padding-right: 20px;
 
-  padding-right: 10px;
   text-decoration: none;
   letter-spacing: 0;
+  z-index: 2;
 }
 
 .nav-item:hover {
@@ -295,8 +330,6 @@ div .back-to-top {
 }
 
 .nav-item-container {
-  margin-left: 100px;
-  padding-bottom: 15px;
   z-index: 2;
 }
 
@@ -307,10 +340,13 @@ div .back-to-top {
 .hamburger-button {
   visibility: hidden;
 }
-
+.site-logo-main {
+  /* to keep left aligned there is left padding, and to keep center aligned, padding top */
+  padding: 10px 0 0 100px;
+}
 .site-logo-main,
 .site-logo-contact {
-  height: 40px;
+  height: 25px;
 }
 
 .site-logo-main:hover,
@@ -318,15 +354,7 @@ div .back-to-top {
   cursor: pointer;
 }
 
-.site-logo {
-  font-weight: lighter;
-  text-align: center;
-  border-bottom: 1px solid #DFCAD5;
-  color: #DFCAD5;
-  letter-spacing: 1px;
-  margin: 0 100px;
-  padding: 0 5px;
-}
+
 
 /*==========
   hero
@@ -337,20 +365,23 @@ div .back-to-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 100px 50px;
+  padding: 80px 100px 50px;
 }
 
 .hero-image {
-  background-size: cover;
-  opacity: 1;
-  background-image: url('images/desktop.jpg');
-  height: 200%;
-  width: 100%;
+  animation: animatedBackground 1s ease-in;
+  /* background-image: url('images/desktop.jpg'); */
+  background: url("images/desktop.jpg") no-repeat center fixed;
   background-position: 0 0;
   background-repeat: repeat-x;
-  animation: animatedBackground 1s ease-in;
-}
+  background-size: cover;
+  height: 200%;
+  opacity: 1;
+  width: 100%;
+  max-width: 100%;
 
+}
+/*
 .hero-image-secondary {
   background-color: grey;
   box-shadow: 5px 10px #DFCAD5;
@@ -358,7 +389,7 @@ div .back-to-top {
   height: 100%;
   margin-right: 100px;
   text-align: right;
-}
+} */
 
 .welcome-tag {
   font-size: 1.5rem;
@@ -388,12 +419,12 @@ div .back-to-top {
   Contact Form
   ==========*/
 .contact-form-section {
+  /* align-items: center; */
   background-color: #22233D;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 50px 100px;
+  /* display: flex; */
+  padding: 30px 100px 50px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .contact-heading, .offer-heading {
@@ -414,21 +445,24 @@ div .back-to-top {
   opacity: 7;
   text-decoration: underline;
 }
-
-.email-input, .name-input {
-  border: none;
-  border-bottom: 2px solid #DFcad5;
-  background-color: #22233D;
-  display: block;
-  width: 200px;
+.name-input {
+  border-right: none;
+}
+.input-container input {
+  border-radius: none;
+  border: 1.25px double rgb(161, 7, 91);
+  border-width: 3px;
+  box-sizing: border-box;
+  height: 41px;
+  width: 20rem;
+  max-width: 100%;
 }
 
-.input-container {
-  padding-right: 10px;
-}
-
-.request-button-container {
-  padding-top: 20px;
+.input-holder {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: right;
 }
 
 /*==========
@@ -459,9 +493,10 @@ div .back-to-top {
 }
 
 .service-image {
-  color: #5f64ab;
+  color: rgb(161, 7, 91);
   font-size: 5rem;
   margin: 10px auto;
+  max-width: 100%;
 }
 
 .service-image:hover {
@@ -469,13 +504,14 @@ div .back-to-top {
 }
 
 .offer-heading {
-  color: black;
+  color: #22233D;
   padding-top: 20px;
   text-align: center;
 }
 
 .card {
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid #22233D;
   border-radius: 5px;
   margin: 20px 10px 50px;
   /*around card div*/
@@ -508,12 +544,13 @@ div .back-to-top {
 .profile-img {
   display: inline-block;
   border-radius: 100%;
+  max-width: 100%;
 }
 
 .profile {
   opacity: 1;
   height: 350px;
-  width: 300px;
+  width: 350px;
 }
 
 /* the actual profile image */
@@ -545,12 +582,16 @@ div .back-to-top {
   ==========*/
 #Projects {
   background-color: #22233D;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
   padding: 50px 100px;
   margin: 5px 0;
 }
 
 #Projects a {
-  color: #CE1379;
+  color: #5f64ab;
 }
 
 #Projects img {
@@ -569,21 +610,21 @@ div .back-to-top {
   color: white;
   letter-spacing: 1px;
   font-weight: lighter;
+  text-align: left;
 }
 
 .portfolio-thumbnails-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .portfolio-text {
-  color: #DFCAD5;
+  color: white;
   padding-left: 50px;
 }
 
 .portfolio-h5 {
-  padding-top: 10px;
+  padding: 10px 0 10px;
 }
 
 .github-button-container {
@@ -645,14 +686,14 @@ div .back-to-top {
 }
 
 .cta-heading {
-  color: #CE1379;
+  color: rgb(161, 7, 91);
   font-weight: lighter;
   text-decoration: underline;
   text-decoration-color: white;
 }
 
 .cta-heading::after {
-  content: 'Let start with a chat, and you can tell me about your project.';
+  content: "Let's start with a chat, and you can tell me about your project.";
   color: #22233D;
   background-color: white;
   display: block;
@@ -662,9 +703,9 @@ div .back-to-top {
 }
 
 .cta-image {
+  border-radius: 10px;
   height: 400px;
   width: 450px;
-  border-radius: 10px;
 }
 
 .cta-btn {
@@ -713,7 +754,7 @@ div .back-to-top {
 }
 
 /* .footer-icons i:hover {
-  color: #CE1379;
+  color: rgb(161, 7, 91);
 } */
 .copyright {
   color: #DFCAD5;
@@ -733,7 +774,7 @@ Contact Page
   border-bottom: 10px solid white;
   display: flex;
   justify-content: space-around;
-  padding: 50px 100px;
+  padding: 120px 100px 50px;
 }
 .contact-page-heading {
   font-size: 3rem;
@@ -743,6 +784,9 @@ Contact Page
   border: none;
   height: 30px;
   margin-bottom: 10px;
+}
+.contact-page-form-div {
+  padding-right: 50px;
 }
 .contact-inputs {
   width: 100%;
@@ -781,17 +825,21 @@ font-size: 1rem;
 }
 .contact-navbar {
   background-color: #22233D;
+  padding: 20px 0 20px 80px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
-
-
-
+.site-logo-contact {
+  padding-top: 10px;
+}
 
 
 /*==========
   media queries
   ==========*/
 /* nav bar queries */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
   .hamburger-button {
     font-size: 1.5rem;
     color: #DFCAD5;
@@ -833,42 +881,30 @@ font-size: 1rem;
 }
 
 /* contact form queries (index.html) */
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 1030px) {
+  .input-holder {
+    flex-wrap: wrap;
+  }
   .contact-form-section {
+    flex-wrap: wrap;
+  }
+
+  /* .contact-form-section {
     display: block;
     padding-top: 20px;
     position: relative;
-  }
+  } */
 
-  .input-container {
+  /* .input-container {
     padding: 10px 0;
-  }
+  } */
 
-  .request-button-container {
-    position: absolute;
-    right: 100px;
-    top: 50%;
-    padding-top: 0;
-  }
-
-  .request-button {
-    box-shadow: 3px 3px #CE1379;
-    padding: 10px 20px;
-  }
-
-  .request-button:hover {
-    box-shadow: 3px 3px white;
-  }
+}
+@media only screen and (max-width: 840px) {
+.input-holder {
+}
 }
 
-@media only screen and (max-width: 600px) {
-  .request-button-container {
-    position: static;
-    right: 100px;
-    top: 50%;
-    padding-top: 20px;
-  }
-}
 
 /* card queries */
 @media only screen and (max-width: 1120px) {
@@ -909,7 +945,7 @@ font-size: 1rem;
 }
 
 /* Project Queries */
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1140px) {
   .portfolio-thumbnails-row {
     flex-wrap: wrap;
   }
@@ -918,6 +954,15 @@ font-size: 1rem;
     padding-left: 0;
   }
 }
+
+
+
+
+
+
+
+
+
 
 /* CTA queries */
 @media only screen and (max-width: 880px) {

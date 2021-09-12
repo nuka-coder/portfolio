@@ -1,3 +1,42 @@
+//Navbar Scrolling
+window.addEventListener("scroll", function() {
+  let header = document.querySelector(".navbar-container");
+  var windowPosition = window.scrollY > 0
+  //changing navbar styling based on position of viewport
+  header.classList.toggle("scrolling-active", windowPosition); //you can store conditionals within the method
+  //navbar blog button
+  let navBlogBtn = document.getElementById("Blog");
+  navBlogBtn.classList.toggle("blog-display-scroll", windowPosition);
+  //hamburger icon
+  let navLinks = document.querySelector("nav-item-container");
+  navLinks.classList.toggle("nav-links-scroll", windowPosition);
+  console.log("Scrolling");
+});
+//Choosing what to hapen to primary nav links div when scrolling
+window.addEventListener("scroll", function() {
+  let primaryNavLinks = document.querySelector(".links-1");
+  if (window.scrollY > 0) { //if the y-axis is greater than zero
+    $(primaryNavLinks).css("display", "none");
+  } else if (window.scrollY == 0) {
+    $(primaryNavLinks).css("display", "inherit");
+  }
+});
+//Choosing what to hapen to secondary nav links div when scrolling
+window.addEventListener("scroll", function() {
+  let secondaryNavLinks = document.querySelector(".links-2");
+  let secondaryNavLinksStyle = document.querySelectorAll(".nav-links-2-a");
+  if (window.scrollY !== 0) { //if the y-axis is not equal to zero
+    $(secondaryNavLinks).css("display", "inherit");
+    $(secondaryNavLinksStyle).css("color", "#DFCAD5");
+  } else if (window.scrollY == 0) {
+    $(secondaryNavLinks).css("display", "none");
+  }
+});
+//Slide-In Animation for Services Section
+let cards = $(".all-cards-container");
+// if(window.scrollY > 0) {
+// }
+
 //Effects for Form Inputs
 $("input").on("click", function() {
   $(this).css("background-color", "#DFCAD5");
@@ -12,16 +51,8 @@ $(".site-logo-main").on("click", function() {
 })
 //Site Logo (contact page) url redirect event
 $(".site-logo-contact").on("click", function() {
-  window.location.href="index.html";
+  window.location.href = "index.html";
 })
-//About Section Profile Image Effect
-$(".profile").on("mouseover", function() {
-  $(".profile").animate({opacity: 1});
-})
-$(".profile").on("mouseout", function() {
-  $(".profile").animate({opacity: .7});
-})
-
 //Header and Hero Button Hover Effects
 $(".top-btns").on("mouseover", function() {
   $(this).animate({});
@@ -29,9 +60,13 @@ $(".top-btns").on("mouseover", function() {
 $("button").on("mouseout", function() {
   $(this).animate({});
 })
+//Cycle Hostel Project Link
+$(".Cycle-Hostel-Link").on("click", function() {
+  window.open("https://nuka-coder.github.io/Cycle-Hostel/", "_blank");
+})
 //CTA button url redirect
 $(".cta-btn").on("click", function() {
-  window.location.href="contact.html";
+  window.location.href = "contact.html";
 })
 //Footer Icons Effects
 $(".footer-icons i").on("mouseover", function() {
@@ -49,7 +84,7 @@ $(".twitter").on("click", function() {
   window.open("https://twitter.com/nuka_coder", "_blank");
 })
 //Instagram Footer Button
-$(".instagram").on("click", function(){
+$(".instagram").on("click", function() {
   window.open("https://instagram.com/houdinibeanie", "_blank");
 })
 //Blog Button URL Redirect
@@ -57,6 +92,7 @@ $("#Blog").on("click", function() {
   window.open("https://brittany.hashnode.dev/", "_blank");
 })
 //Portfolio Button URL Redirect
+
 $("#Portfolio").on("click", function(){
   window.open("https://github.com/nuka-coder", "_blank");
 })
@@ -67,7 +103,7 @@ $("form").on("submit", function() {
 $("form").on("submit", function() {
   $(".contact-form-section").slideUp(500);
   $("#Contact div").css("display", "none");
-    $(".contact-form-section").css("display", "block");
+  $(".contact-form-section").css("display", "block");
   $(".contact-form-section").slideDown(600, function() {
     $(".form-submit-greeting").html("Awesomesauce! Look out for my email.").css("display", "block");
   });
