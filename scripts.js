@@ -1,3 +1,16 @@
+//Contact Form Post Scripts
+const form = document.getElementById("Form");
+const formEvent = form.addEventListener("submit", function(event){
+  event.preventDefault();
+
+  let mail = new FormData(form);
+  sendMail(mail);
+})
+const sendMail = function(mail) {
+  fetch("")
+}
+
+
 //Navbar Scrolling
 window.addEventListener("scroll", function() {
   let header = document.querySelector(".navbar-container");
@@ -12,7 +25,7 @@ window.addEventListener("scroll", function() {
   navLinks.classList.toggle("nav-links-scroll", windowPosition);
   console.log("Scrolling");
 });
-//Choosing what to hapen to primary nav links div when scrolling
+//Choosing what to happen to primary nav links div when scrolling
 window.addEventListener("scroll", function() {
   let primaryNavLinks = document.querySelector(".links-1");
   if (window.scrollY > 0) { //if the y-axis is greater than zero
@@ -21,7 +34,7 @@ window.addEventListener("scroll", function() {
     $(primaryNavLinks).css("display", "inherit");
   }
 });
-//Choosing what to hapen to secondary nav links div when scrolling
+//Choosing what to happen to secondary nav links div when scrolling
 window.addEventListener("scroll", function() {
   let secondaryNavLinks = document.querySelector(".links-2");
   let secondaryNavLinksStyle = document.querySelectorAll(".nav-links-2-a");

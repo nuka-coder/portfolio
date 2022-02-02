@@ -371,7 +371,7 @@ div .back-to-top {
 .hero-image {
   animation: animatedBackground 1s ease-in;
   /* background-image: url('images/desktop.jpg'); */
-  background: url("images/desktop.jpg") no-repeat center fixed;
+  background: url("public/assets/images/desktop.jpg") no-repeat center fixed;
   background-position: 0 0;
   background-repeat: repeat-x;
   background-size: cover;
